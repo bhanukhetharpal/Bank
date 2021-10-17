@@ -20,8 +20,9 @@ const withdrawSort = document.querySelector('.withdraw__sort');
 
 const WithdrawPalet = document.querySelector('.account__transaction__withdraw');
 const DepositPalet = document.querySelector('.account__transaction__deposit');
-
-
+const loanamount = document.querySelector('.loan_amount');
+const loancheck = document.querySelector('.loan_check');
+const Loanresult = document.querySelector('.loan_result');
 const convertToDate = (today) => {
     const dd =  String(today.getDate()).padStart(2,"0");
     const mm = String(today.getMonth()).padStart(2,"0");
@@ -101,6 +102,17 @@ inputName.addEventListener("keydown",(event) => {
       <div>Balance     : ${depositAmount}</div>`;
       accountname.innerHTML = html;
 }    
-   
-   
-  });
+      loancheck.addEventListener("click",function(){
+          let loan = loanamount.value;
+          console.log(loan);
+          loanamount.value = "";
+          const balance = depositAmount;
+          laon = loan/10;
+          let ans = "disaproved."
+          if(balance>=loan){
+            ans = "approved"
+          }
+
+          Loanresult.innerHTML=`Loan is ${ans}.`;
+      });
+    });
