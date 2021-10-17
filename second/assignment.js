@@ -54,18 +54,20 @@ withdrawButton.addEventListener("click" , function(){
 
 });
 depositSort.addEventListener("click",function(){
-    const ds = Accountholder.deposits.sort();
+     Accountholder.deposits.sort();
+      Accountholder.deposits;
     depositCards.innerHTML="";
-    console.log(ds);
-    ds.forEach(elem=>{
+    console.log(Accountholder.deposits);
+    Accountholder.deposits.forEach(elem=>{
         displayCards(elem,'Deposit',depositCards,new Date());
     });   
 });
 withdrawSort.addEventListener("click",function(){
-    const ws = Accountholder.withdraws.sort();
+    Accountholder.withdraws.sort();
+    Accountholder.withdraws;
     withdrawCards.innerHTML="";
-    console.log(ws);
-    ws.forEach(elem=>{
+    console.log(Accountholder.withdraws);
+    Accountholder.withdraws.forEach(elem=>{
         displayCards(elem,'Deposit',withdrawCards,new Date());
     });   
 });
@@ -104,7 +106,6 @@ inputName.addEventListener("keydown",(event) => {
 }    
       loancheck.addEventListener("click",function(){
           let loan = loanamount.value;
-          console.log(loan);
           loanamount.value = "";
           const balance = depositAmount;
           laon = loan/10;
