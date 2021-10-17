@@ -18,9 +18,6 @@ const withdrawButton = document.querySelector('.withdraw__button');
 const withdrawInput = document.querySelector('.withdraw_input');
 const withdrawSort = document.querySelector('.withdraw__sort');
 
-
-{/* <div class="account__transaction__withdraw"> Rs 200000</div>
-          <div class="account__transaction__deposit">Rs 56889</div> */}
 const WithdrawPalet = document.querySelector('.account__transaction__withdraw');
 const DepositPalet = document.querySelector('.account__transaction__deposit');
 
@@ -57,7 +54,7 @@ withdrawButton.addEventListener("click" , function(){
 });
 depositSort.addEventListener("click",function(){
     const ds = Accountholder.deposits.sort();
-    displayCards.innerHTML="";
+    depositCards.innerHTML="";
     console.log(ds);
     ds.forEach(elem=>{
         displayCards(elem,'Deposit',depositCards,new Date());
@@ -65,10 +62,10 @@ depositSort.addEventListener("click",function(){
 });
 withdrawSort.addEventListener("click",function(){
     const ws = Accountholder.withdraws.sort();
-    displayCards.innerHTML="";
+    withdrawCards.innerHTML="";
     console.log(ws);
     ws.forEach(elem=>{
-        displayCards(elem,'Deposit',depositCards,new Date());
+        displayCards(elem,'Deposit',withdrawCards,new Date());
     });   
 });
 
