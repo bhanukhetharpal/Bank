@@ -98,9 +98,9 @@ inputName.addEventListener("keydown",(event) => {
       const html = `<div>Name        : ${user}</div>
       <div>Account No. : ${userdata[0].account_No}</div>
       <div>Type        : ${userdata[0].type}</div>
-      <div>Balance     : 3600000</div>`;
+      <div>Balance     : ${depositAmount}</div>`;
       accountname.innerHTML = html;
-}
+}    
    
    
   });
